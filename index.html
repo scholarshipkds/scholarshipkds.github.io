@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wspieraj Edukację z Wartościami - Fundusz Stypendialny Szkół im. Króla Dawida</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-blue-900">Szkoły im. Króla Dawida</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#o-nas" class="text-stone-600 hover:text-blue-900 transition duration-300">O nas</a>
+                <a href="#cel" class="text-stone-600 hover:text-blue-900 transition duration-300">Nasz cel</a>
+                <a href="#jak-pomoc" class="text-stone-600 hover:text-blue-900 transition duration-300">Jak pomóc?</a>
+                <a href="#historie" class="text-stone-600 hover:text-blue-900 transition duration-300">Historie</a>
+                <a href="#wesprzyj" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 shadow-md">Wesprzyj nas</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-stone-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#o-nas" class="block py-2 px-6 text-sm text-stone-600 hover:bg-stone-100">O nas</a>
+            <a href="#cel" class="block py-2 px-6 text-sm text-stone-600 hover:bg-stone-100">Nasz cel</a>
+            <a href="#jak-pomoc" class="block py-2 px-6 text-sm text-stone-600 hover:bg-stone-100">Jak pomóc?</a>
+            <a href="#historie" class="block py-2 px-6 text-sm text-stone-600 hover:bg-stone-100">Historie</a>
+            <a href="#wesprzyj" class="block py-2 px-6 text-sm text-amber-700 font-bold hover:bg-stone-100">Wesprzyj nas</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="bg-white">
+            <div class="container mx-auto px-6 py-20 md:py-32 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-blue-900 leading-tight">Kształtujemy przyszłość. <br class="hidden md:block" />Inwestujemy w pokolenia.</h1>
+                <p class="mt-6 text-lg md:text-xl text-stone-600 max-w-3xl mx-auto">Dołącz do nas i pomóż tworzyć przestrzeń, w której młodzi ludzie wzrastają w mądrości, oparciu o wartości chrześcijańskie i duchu edukacji klasycznej. Twoje wsparcie otwiera drzwi do wiedzy dla zdolnych uczniów.</p>
+                <a href="#wesprzyj" class="mt-10 inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 px-10 rounded-full transition duration-300 shadow-xl text-lg">Zostań naszym partnerem</a>
+            </div>
+        </section>
+
+        <section id="o-nas" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto">
+                     <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Nasza Misja: Edukacja z Fundamentem</h2>
+                    <p class="mt-4 text-stone-600">
+                        Wierzymy, że edukacja to więcej niż nauka – to formowanie charakteru. W Chrześcijańskich Szkołach im. Króla Dawida dążymy do wysokiego poziomu nauczania, opartego na wzorcach zaczerpniętych z idei edukacji klasycznej, z solidnym fundamentem wartości chrześcijańskich, przygotowując uczniów do mądrego i odpowiedzialnego życia.<br><br>Naszą misją jest zapewnienie uczniom klasycznej chrześcijańskiej edukacji, która rozwija cnoty i postawy oparte na wartościach, kształtuje umiejętność krytycznego myślenia oraz inspiruje do wykorzystywania talentów na rzecz dla dobra wspólnego
+                    </p>
+                </div>
+
+                <div class="mt-16 grid md:grid-cols-3 gap-8 md:gap-12 text-center">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="text-4xl text-amber-600 mb-4">🏛️</div>
+                        <h3 class="text-xl font-bold text-blue-900">Edukacja Klasyczna</h3>
+                        <p class="mt-2 text-stone-600">Czerpiemy z najlepszych wzorców ponadczasowych ucząc krytycznego myślenia, logiki i sztuki argumentacji - debaty. Stawiamy na głębokie zrozumienie, a nie tylko na pamięciowe opanowanie materiału.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="text-4xl text-amber-600 mb-4">✝️</div>
+                        <h3 class="text-xl font-bold text-blue-900">Wartości Chrześcijańskie</h3>
+                        <p class="mt-2 text-stone-600">Tworzymy środowisko oparte na wartościach takich jak: Prawda, Dobro, Piękno ucząc szacunku i miłości bliźniego. Wartości te są integralną częścią naszej codzienności.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="text-4xl text-amber-600 mb-4">👨‍👩‍👧‍👦</div>
+                        <h3 class="text-xl font-bold text-blue-900">Otwarta Społeczność</h3>
+                        <p class="mt-2 text-stone-600">Jesteśmy otwarci na rodziny z różnych środowisk. Pragniemy, ta ścieżka kształcenia była dostępna dla każdego zdolnego ucznia, niezależnie od sytuacji materialnej rodziny.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cel" class="py-20 md:py-28 bg-blue-50/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Nasz Cel: Fundusz Stypendialny</h2>
+                    <p class="mt-4 text-stone-600">
+                        Naszym celem jest zbieranie funduszy, które pozwolą nam objąć programem stypendialnym uczniów, których rodziny napotykają bariery finansowe oraz uczniów ponadprzeciętnymi zdolnościami edukacyjnymi. Każda złotówka przybliża uczniów do pełnego rozwoju ich potencjału.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="jak-pomoc" class="py-20 md:py-28">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Jak Możesz Pomóc?</h2>
+                <p class="mt-4 text-stone-600 max-w-3xl mx-auto">
+                    Twoje wsparcie ma realne znaczenie. Każda forma pomocy, niezależnie od jej wielkości, jest cegiełką budującą przyszłość naszych uczniów. Wybierz opcję, która najbardziej Ci odpowiada i stań się częścią naszej społeczności.
+                </p>
+
+                <div class="mt-16 grid md:grid-cols-3 gap-8">
+                    <div class="border border-stone-200 p-8 rounded-2xl bg-white shadow-sm">
+                        <h3 class="text-2xl font-bold text-amber-700">Jednorazowa Wpłata</h3>
+                        <p class="mt-4 text-stone-600">Twoja jednorazowa darowizna to potężny impuls, który pomoże nam szybko reagować na pilne potrzeby i realizować bieżące cele funduszu.</p>
+                        <a href="#wesprzyj" class="mt-6 inline-block text-blue-900 font-bold hover:underline">Wpłać teraz →</a>
+                    </div>
+                    <div class="border-2 border-amber-600 p-8 rounded-2xl bg-amber-50 shadow-lg relative">
+                        <span class="absolute top-0 -translate-y-1/2 bg-amber-600 text-white text-xs font-bold px-3 py-1 rounded-full">Najpopularniejsze</span>
+                        <h3 class="text-2xl font-bold text-amber-700">Stałe Wsparcie</h3>
+                        <p class="mt-4 text-stone-600">Zostań stałym sponsorem. Regularne, comiesięczne wpłaty dają nam stabilność i pozwalają planować długoterminowe wsparcie dla uczniów.</p>
+                         <a href="#wesprzyj" class="mt-6 inline-block text-blue-900 font-bold hover:underline">Zostań sponsorem →</a>
+                    </div>
+                    <div class="border border-stone-200 p-8 rounded-2xl bg-white shadow-sm">
+                        <h3 class="text-2xl font-bold text-amber-700">Zostań Przyjacielem</h3>
+                        <p class="mt-4 text-stone-600">Udostępnij informację o naszej zbiórce w mediach społecznościowych. Twoje słowo może dotrzeć do osób, które tak jak my, wierzą w siłę edukacji.</p>
+                         <a href="https://www.david.edu.pl" target="_blank" class="mt-6 inline-block text-blue-900 font-bold hover:underline">Odwiedź naszą stronę →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="historie" class="py-20 md:py-28 bg-stone-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Historie i Świadectwa: Zobacz, Kogo Wspierasz</h2>
+                    <p class="mt-4 text-stone-600">
+                        Nic nie mówi więcej o naszej misji niż historie tych, których wspieramy. Poniższe świadectwa rodziców i uczniów pokazują, jak klasyczna edukacja z fundamentem chrześcijańskim zmienia życie i daje nadzieję na lepszą przyszłość. To są owoce Twojej darowizny.
+                    </p>
+                </div>
+
+                <div class="mt-12 max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-stone-200 relative">
+                    <div id="testimonial-slider" class="relative overflow-hidden h-64 md:h-48 flex items-center">
+                        <blockquote id="testimonial-content-1" class="testimonial-item transition-opacity duration-700 opacity-100 absolute w-full text-center">
+                            <p class="text-xl md:text-2xl italic text-stone-700 leading-relaxed">
+                                "Nasza córka odnalazła tu nie tylko mądrość, ale i cel. Program stypendialny umożliwił jej dostęp do edukacji, która w innej sytuacji byłaby poza naszym zasięgiem. Dziękujemy darczyńcom za ten wielki dar."
+                            </p>
+                            <footer class="mt-6 font-semibold text-amber-600">- Rodzina Kowalskich (Rodzice uczennicy SP)</footer>
+                        </blockquote>
+                        <blockquote id="testimonial-content-2" class="testimonial-item transition-opacity duration-700 opacity-0 absolute w-full text-center">
+                            <p class="text-xl md:text-2xl italic text-stone-700 leading-relaxed">
+                                "Liceum Króla Dawida to miejsce, gdzie mogę otwarcie zadawać pytania i wzrastać w wierze, jednocześnie przygotowując się do wymagających studiów. Dzięki stypendium mogę skupić się na nauce."
+                            </p>
+                            <footer class="mt-6 font-semibold text-amber-600">- Jan M. (Uczeń Liceum, stypendysta)</footer>
+                        </blockquote>
+                        <blockquote id="testimonial-content-3" class="testimonial-item transition-opacity duration-700 opacity-0 absolute w-full text-center">
+                            <p class="text-xl md:text-2xl italic text-stone-700 leading-relaxed">
+                                "Jako absolwent widzę, jak edukacja klasyczna przygotowała mnie do życia w sposób, w jaki nie zrobiłaby tego żadna inna szkoła. Wspieram Fundusz, by inni mieli tę szansę."
+                            </p>
+                            <footer class="mt-6 font-semibold text-amber-600">- Piotr W. (Alumn i Darczyńca)</footer>
+                        </blockquote>
+                    </div>
+                    <div class="flex justify-center mt-6 space-x-2">
+                        <button class="testimonial-dot bg-stone-300 w-3 h-3 rounded-full hover:bg-amber-600 transition-colors duration-300" data-index="0"></button>
+                        <button class="testimonial-dot bg-stone-300 w-3 h-3 rounded-full hover:bg-amber-600 transition-colors duration-300" data-index="1"></button>
+                        <button class="testimonial-dot bg-stone-300 w-3 h-3 rounded-full hover:bg-amber-600 transition-colors duration-300" data-index="2"></button>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-bold text-blue-900 mt-20 mb-8 text-center">Nasza Społeczność w Obiektywie</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="h-48 md:h-64 bg-stone-300 rounded-xl shadow-lg flex items-center justify-center text-sm text-stone-600 overflow-hidden hover:shadow-2xl transition-shadow duration-300 cursor-pointer" onclick="openGallery()">
+                        <img src="./Galeria/482029531_981839274041508_5945852460642377143_n.jpg" alt="Lekcja na Świeżym Powietrzu" class="w-full h-full object-cover pointer-events-none">
+                    </div>
+                    <div class="h-48 md:h-64 bg-stone-300 rounded-xl shadow-lg flex items-center justify-center text-sm text-stone-600 overflow-hidden hover:shadow-2xl transition-shadow duration-300 cursor-pointer" onclick="openGallery()">
+                        <img src="./Galeria/Festiwal_edukacji_klasycznej.jpg" alt="Festiwal Edukacji Klasycznej" class="w-full h-full object-cover pointer-events-none">
+                    </div>
+                    <div class="h-48 md:h-64 bg-stone-300 rounded-xl shadow-lg flex items-center justify-center text-sm text-stone-600 overflow-hidden hover:shadow-2xl transition-shadow duration-300 cursor-pointer" onclick="openGallery()">
+                         <img src="./Galeria/Projekt_naukowy_w_liceum.jpg" alt="Projekt Naukowy Liceum" class="w-full h-full object-cover pointer-events-none">
+                    </div>
+                    <div class="h-48 md:h-64 bg-stone-300 rounded-xl shadow-lg flex items-center justify-center text-sm text-stone-600 overflow-hidden hover:shadow-2xl transition-shadow duration-300 cursor-pointer" onclick="openGallery()">
+                        <img src="./Galeria/Wspólna_modlitwa_i_spotkanie.jpg" alt="Wspólna Modlitwa i Spotkanie" class="w-full h-full object-cover pointer-events-none">
+                    </div>
+                </div>
+                
+                <!-- Hidden gallery images - only visible in modal -->
+                <div id="hidden-gallery-images" class="hidden">
+                    <img src="./Galeria/515679948_1064823289076439_616390282304473620_n.jpg" class="gallery-image">
+                    <img src="./Galeria/482022663_982096730682429_6800097860902509599_n.jpg" alt="Wycieczka Edukacyjna do Muzeum" class="gallery-image">
+                    <img src="./Galeria/482986066_982727927285976_7914275708712692150_n.jpg" alt="Konkurs Debat Oksfordzkich" class="gallery-image">
+                    <img src="./Galeria/494206016_122215190384165961_2919616787274241917_n.jpg" alt="Warsztaty Artystyczne" class="gallery-image">
+                    <img src="./Galeria/514380438_1064822522409849_3882290885260389879_n.jpg" alt="Lekcja Języka Łacińskiego" class="gallery-image">
+                </div>
+
+            </div>
+        </section>
+
+        <section id="wesprzyj" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Wesprzyj Fundusz Stypendialny</h2>
+                <p class="mt-4 text-stone-600 max-w-3xl mx-auto">
+                   To jest ostatni, najważniejszy krok. Wybierz kwotę, którą chcesz przekazać jako symboliczną "cegiełkę" na budowę przyszłości naszych podopiecznych. Poniżej znajduje się bezpieczny moduł płatności, który umożliwia szybkie i wygodne przekazanie darowizny. Dziękujemy za Twoje zaangażowanie!
+                </p>
+
+                <div class="max-w-2xl mx-auto mt-12 bg-stone-50 p-8 rounded-2xl shadow-inner border border-stone-200">
+                    <h3 class="text-xl font-semibold text-stone-700">Wybierz kwotę wsparcia (PLN):</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+                        <button data-amount="50" class="donation-amount-btn bg-white border-2 border-stone-300 hover:border-amber-600 hover:bg-amber-50 text-stone-700 font-bold py-4 rounded-lg transition duration-300 text-lg">50 zł</button>
+                        <button data-amount="100" class="donation-amount-btn bg-white border-2 border-stone-300 hover:border-amber-600 hover:bg-amber-50 text-stone-700 font-bold py-4 rounded-lg transition duration-300 text-lg">100 zł</button>
+                        <button data-amount="250" class="donation-amount-btn bg-white border-2 border-stone-300 hover:border-amber-600 hover:bg-amber-50 text-stone-700 font-bold py-4 rounded-lg transition duration-300 text-lg">250 zł</button>
+                        <button data-amount="500" class="donation-amount-btn bg-white border-2 border-stone-300 hover:border-amber-600 hover:bg-amber-50 text-stone-700 font-bold py-4 rounded-lg transition duration-300 text-lg">500 zł</button>
+                    </div>
+
+                    <div class="mt-6">
+                        <label for="custom-amount" class="text-sm text-stone-600">Lub wpisz własną kwotę:</label>
+                        <input type="number" id="custom-amount-input" placeholder="np. 75" class="mt-2 w-full text-center p-4 border-2 border-stone-300 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-amber-600 outline-none transition text-lg">
+                    </div>
+                    
+                    <button id="paypal-button" class="mt-8 w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-5 px-8 rounded-lg transition duration-300 text-xl shadow-lg flex items-center justify-center">
+                        <span>Przejdź do płatności z PayPal</span>
+                        <svg class="w-6 h-6 ml-3" fill="currentColor" viewBox="0 0 24 24"><path d="M16.035 2.44a1.031 1.031 0 0 0-.81.423l-3.324 4.87-1.464-4.87a1.031 1.031 0 0 0-.977-.683h-5.43c-.566 0-.96.48-1.03.959-.02.146.03.292.08.438l3.774 12.44c.14.46.56.74 1.03.74h3.11c.47 0 .89-.28 1.03-.74l1.89-6.22 1.3 1.905c.16.23.42.35.68.35h3.11c.567 0 .96-.48 1.03-.959.02-.146-.03-.292-.08-.438l-3.774-12.44a1.031 1.031 0 0 0-.81-.683h-2.223Z"/></svg>
+                    </button>
+                    <p class="mt-4 text-xs text-stone-500">Zostaniesz przekierowany do bezpiecznej bramki płatności PayPal, gdzie możesz zapłacić kartą lub saldem PayPal.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
+        <button id="close-gallery-modal" class="absolute top-4 right-4 text-white hover:text-amber-600 transition-colors duration-300">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        
+        <button id="prev-gallery-btn" class="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-amber-600 transition-colors duration-300">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+        </button>
+        
+        <button id="next-gallery-btn" class="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-amber-600 transition-colors duration-300">
+            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
+        
+        <div class="max-w-5xl max-h-full w-full flex flex-col items-center">
+            <img id="modal-gallery-image" src="" alt="" class="max-h-[70vh] w-auto object-contain rounded-lg shadow-2xl">
+            <p id="modal-gallery-caption" class="mt-4 text-white text-center text-lg"></p>
+            <p id="gallery-counter" class="mt-2 text-amber-600 font-semibold"></p>
+        </div>
+    </div>
+
+    <footer class="bg-blue-900 text-white">
+        <div class="container mx-auto px-6 py-10 text-center">
+            <p class="font-bold">Chrześcijańska Szkoła Podstawowa i Liceum im. Króla Dawida</p>
+            <p class="mt-2 text-sm text-blue-200">"Wychowuj chłopca odpowiednio do drogi, którą ma iść, a nie zejdzie z niej nawet w starości." (Przyp. 22:6)</p>
+            <div class="mt-6">
+                <a href="https://www.david.edu.pl" target="_blank" class="text-blue-100 hover:text-white underline">Odwiedź stronę naszych szkół</a>
+            </div>
+             <p class="text-xs text-blue-300 mt-8">&copy; 2025 Szkoły im. Króla Dawida. Wszelkie prawa zastrzeżone. Strona koncepcyjna.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
