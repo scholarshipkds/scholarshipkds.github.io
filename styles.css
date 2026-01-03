@@ -17,3 +17,26 @@ body {
         height: 350px;
     }
 }
+
+.parallax-bg {
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+#home {
+    min-height: 600px;
+}
+
+@media (min-width: 768px) {
+    #home {
+        min-height: 700px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .parallax-bg {
+        transform: none !important;
+    }
+}

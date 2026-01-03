@@ -6,11 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const testimonialDots = document.querySelectorAll('.testimonial-dot');
     let currentTestimonialIndex = 0;
 
-    // Gallery functionality
     let galleryImages = [];
     let currentGalleryIndex = 0;
 
-    // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -26,12 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Mobile menu toggle
     mobileMenuButton.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
     });
-    
-    // Testimonial slider functions
+
     function showTestimonial(index) {
         testimonialItems.forEach((item, i) => {
             if (i === index) {
@@ -69,15 +65,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Initialize testimonial slider
     if (testimonialItems.length > 0) {
         showTestimonial(0);
         setInterval(nextTestimonial, 7000);
     }
 
-    // Gallery Modal Functions
     function openGalleryModal(index) {
-        // Collect all gallery images from visible and hidden sections
         const visibleImages = document.querySelectorAll('.grid.grid-cols-2 img');
         const hiddenImages = document.querySelectorAll('#hidden-gallery-images .gallery-image');
         galleryImages = [...visibleImages, ...hiddenImages];
@@ -88,8 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = 'hidden';
         showGalleryImage(index);
     }
-    
-    // Make openGallery available globally for onclick
+
     window.openGallery = function() {
         openGalleryModal(0);
     };
@@ -122,7 +114,6 @@ document.addEventListener('DOMContentLoaded', function() {
         showGalleryImage(currentGalleryIndex);
     }
 
-    // Modal control handlers
     const closeModalBtn = document.getElementById('close-gallery-modal');
     const prevBtn = document.getElementById('prev-gallery-btn');
     const nextBtn = document.getElementById('next-gallery-btn');
@@ -148,7 +139,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Keyboard navigation for gallery
     document.addEventListener('keydown', (e) => {
         const modal = document.getElementById('gallery-modal');
         if (!modal.classList.contains('hidden')) {
@@ -163,3 +153,40 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
+function initParallax() {
+    const parallaxBg = document.querySelector('.parallax-bg');
+    const heroSection = document.getElementById('home');
+    
+    if (!parallaxBg || !heroSection) return;
+    
+    let lastScrollY = window.pageYOffset;
+    let ticking = false;
+    
+    function updateParallax() {
+        const scrolled = lastScrollY;
+        const sectionHeight = heroSection.offsetHeight;
+
+        if (scrolled < sectionHeight + 200) {
+            const yPos = scrolled * 0.4;
+            parallaxBg.style.transform = `translate3d(0, ${yPos}px, 0)`;
+        }
+        
+        ticking = false;
+    }
+    
+    function onScroll() {
+        lastScrollY = window.pageYOffset;
+        
+        if (!ticking) {
+            window.requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    updateParallax();
+}
+
+initParallax();
